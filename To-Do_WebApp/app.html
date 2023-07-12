@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>To-Do List</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" />
+
+    <!-- FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,900&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: rgb(57, 55, 61);
+        }
+
+        .toDoContainer {
+            width: 600px;
+            height: 650px;
+            margin-top: 20px;
+            background-color: rgb(43, 40, 46);
+            border-radius: 20px;
+            border-color: rgb(39, 35, 43);
+            border-style: solid;
+            padding-top: 20px;
+        }
+
+        #taskInput {
+            border: none;
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        .addBtn {
+            color: white;
+            font-weight: bold;
+            background-color: rgb(59, 53, 78);
+            border-color: rgb(82, 73, 106);
+            width: 90px;
+            border-radius: 20px;
+            border-width: 2px;
+            border-style: solid;
+            transition: 0.7s;
+        }
+
+        .addBtn:hover {
+            transition: 0.7s;
+            color: rgb(59, 53, 78);
+            background-color: rgb(177, 164, 219);
+        }
+
+        #inputBox {
+            padding-bottom: 20px;
+            width: 100%;
+            background-color: blueviolet;
+            padding-top: 10px;
+            border-radius: 10px;
+        }
+
+        #inputBox_TitleBar {
+            flex-wrap: wrap;
+            flex-direction: column;
+            flex: auto;
+            text-align: center;
+        }
+
+        #inputBox_TitleBar h2 {
+            flex: auto;
+            text-align: center;
+            color: white;
+        }
+
+        .dateTime {
+            border: none;
+            border-radius: 8px;
+            height: 25px;
+            font-weight: bold;
+            font-size: 15px;
+            width: 130px;
+            flex: auto;
+        }
+
+        #itemList {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #itemList li {
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 10px;
+            list-style-type: none;
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            background: rgb(167, 76, 253);
+            font-size: 18px;
+            transition: 0.2s;
+
+            /* make the list unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #itemList li:nth-child(odd) {
+            background: rgb(219, 173, 255);
+        }
+
+        #itemList li:hover {
+            background: blueviolet;
+            color: white;
+
+        }
+
+        /* When clicked on, add a background color and strike out text */
+        #itemList li.checked {
+            background: rgb(33, 24, 31);
+            color: white;
+            text-decoration: line-through;
+        }
+
+        #itemList li.checked::before {
+            content: "";
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+
+        /* Style the close button */
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+            transition: 0.2s;
+
+        }
+
+        .close:hover {
+            border: none;
+            transition: 0.3s;
+            border-radius: 10px;
+            background-color: #b90000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toDoContainer container-fluid">
+        <div id="inputBox" class="container-fluid">
+            <div id="inputBox_TitleBar">
+                <h2>TO-DO LIST</h2>
+                <div class="inputBox_inputs">
+                    <input type="text" id="taskInput" placeholder="Title.." />
+                    <input type="date" class="dateTime" />
+
+                    <button onclick="addItem()" class="addBtn">Add</button>
+                </div>S
+            </div>
+        </div>
+
+        <ul id="itemList">
+            <li>Hit the gym
+                <span style="margin-left: 15px;" class="dateDisplayed">date</span>
+            </li>
+            <li>Pay bills</li>
+            <li>Meet George</li>
+            <li>Buy eggs</li>
+            <li>Read a book</li>
+            <li>Organize office</li>
+            <li>Organize items</li>
+        </ul>
+    </div>
+
+
+    <script>
+        function addCloseButton() {
+
+            // Adding "x" button inside an item
+            var myNodeList = document.getElementsByTagName("li");
+            for (var i = 0; i < myNodeList.length; i++) {
+                var span = document.createElement("span");
+                var txt = document.createTextNode("x")
+                span.className = "close";
+                span.appendChild(txt);
+                myNodeList[i].appendChild(span)
+            }
+        }
+
+        function addHideFunction() {
+
+            // Adding "none" to the style display of the parent element of the closed item
+            var close = document.getElementsByClassName("close")
+            // Iterate to the items
+            for (var i = 0; i < close.length; i++) {
+                //The function to hide the element
+                close[i].onclick = function() {
+                    var parent = this.parentElement;
+                    parent.style.display = "none"
+                }
+                console.log("hello " + i);
+            }
+
+        }
+        //Add a "checked" symbol when the user clicked on an item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+            }
+        }, false);
+
+        // Create a new list item when clicking on the "Add" button
+        function addItem() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("taskInput").value;
+            var item = document.createTextNode(inputValue);
+            li.appendChild(item);
+            if (inputValue === '') {
+                alert("You must write something!");
+            } else {
+                document.getElementById("itemList").appendChild(li);
+            }
+            //reset the input bar
+            document.getElementById("taskInput").value = "";
+
+            addCloseButton()
+            addHideFunction()
+        }
+
+
+        addCloseButton()
+        addHideFunction()
+    </script>
+</body>
+
+</html>
