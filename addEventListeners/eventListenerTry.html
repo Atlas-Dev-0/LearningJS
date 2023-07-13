@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        function createParagraph() {
+            const para = document.createElement("p");
+            para.textContent = "You clicked the button!";
+            document.body.appendChild(para);
+        }
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll("button");
+
+            for (const button of buttons) {
+                button.addEventListener("click", createParagraph);
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>Click me!</button>
+</body>
+
+</html>
