@@ -67,6 +67,23 @@ If you swapped the order of the first two lines of code, it would no longer work
 
 # How to add JavaScript to your page?
 
+JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS uses [`<link>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) elements to apply external stylesheets and [`<style>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) elements to apply internal stylesheets to HTML, JavaScript only needs one friend in the world of HTML — the [`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) element. Let's learn how this works.
+
+### Internal JavaScript
+
+Internal JavaScript is JavaScript that is added using `<script>` element inside the html just before the closing `</head>` element.
+
+```Html
+<head>
+	<script>
+		//Script Goes here
+	</script>
+</head>
+```
+
+
+
+
 
 
 
