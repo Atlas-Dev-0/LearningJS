@@ -65,13 +65,8 @@ If you swapped the order of the first two lines of code, it would no longer work
 * **[Server-side versus client-side code](/ServerSideAndClientSide.md)**
 * **[Dynamic versus Static Code](/DynamicVersusStaticCode.md)**
 
-
-## How Do you add JS to your Page?
-
-JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS uses [`<link>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) elements to apply external stylesheets and [`<style>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) elements to apply internal stylesheets to HTML, JavaScript only needs one friend in the world of HTML — the [`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) element. Let's learn how this works.
-
-
-
+### Adding JavaScript To your Page ->
+* *[Continue to Adding JavaScript to Your page](/AddingJStoPage.md) 
 
 
 
