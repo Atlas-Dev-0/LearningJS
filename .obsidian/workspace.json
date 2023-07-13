@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c634405530004207",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What are APIs?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "What are APIs?.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "What are APIs?.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "What are APIs?.md"
+                "file": "README.md"
               }
             }
           }
@@ -159,9 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c634405530004207",
+  "active": "071fd701c63025ab",
   "lastOpenFiles": [
     "README.md",
+    "What are APIs?.md",
     "What is JavaScript.md",
     "To-Do_WebApp/css/bootstrap.rtl.min.css.map",
     "To-Do_WebApp/css/bootstrap.rtl.min.css",
@@ -173,7 +161,6 @@
     "To-Do_WebApp/css/bootstrap.css",
     "To-Do_WebApp/css/bootstrap-utilities.rtl.min.css.map",
     "To-Do_WebApp/css/bootstrap-utilities.rtl.min.css",
-    "What are APIs?.md",
     "Untitled.canvas"
   ]
 }
