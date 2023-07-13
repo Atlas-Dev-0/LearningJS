@@ -1,21 +1,23 @@
 # What is JavaScript?
+***Note Created by Kenneth Gonzales***
+
 **_NOTE_**:  The contents here are available in [MDN WEB DOCS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#javascript_running_order)
 
 ### A high-level definition
 
 JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. 
 
-* HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
+*  **HTML** is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
 
-* CSS is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
+* **CSS** is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
 
-* JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
+* **JavaScript** is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
 ### So what can JS really do?
 
 The core client-side JavaScript language consists of some common programming features that allow you to do things like: 
 
-* store useful values inside variables. 
+* Store useful values inside variables. 
 * Operations on pieces of text (known as "strings" in programming).
 * Running code in response to certain events occurring on a web page. For example, a button that when it clicked, it runs a function.
 
@@ -140,18 +142,49 @@ function createParagraph() {
 <button onclick="createParagraph()">Click me!</button>
 ```
 
-The above code will create a button that will append a paragraph to the html page displaying "You clicked the button".
+The above code will create a button that will append a paragraph to the html page displaying "You clicked the button". See the example -> [here]((https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#inline_javascript_handlers).
 
 **Please don't do this, however.** It is bad practice to pollute your HTML with JavaScript, and it is inefficient — you'd have to include the `onclick="createParagraph()"` attribute on every button you want the JavaScript to apply to.
 
-See the example -> [here]((https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#inline_javascript_handlers).
+### Using addEventListener instead
 
+Instead of including JavaScript in your HTML, use a pure JavaScript construct. The `querySelectorAll()` function allows you to select all the buttons on a page. You can then loop through the buttons, assigning a handler for each using `addEventListener()`. The code for this is shown below:
 
+```JS
+const buttons = document.querySelectorAll("button");
 
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
+}
+```
 
+This might be a bit longer than the `onclick` attribute, but it will work for all buttons — no matter how many are on the page, nor how many are added or removed. The JavaScript does not need to be changed.
 
+### Script loading strategies
 
+There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems! A common problem is that all the HTML on a page is loaded in the order in which it appears. If you are using JavaScript to manipulate elements on the page (or more accurately, the [Document Object Model](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.
 
+In the above code examples, in the internal and external examples the JavaScript is loaded and run in the head of the document, before the HTML body is parsed. This could cause an error, so we've used some constructs to get around it.
 
+In the internal example, you can see this structure around the code
+
+```js
+document.addEventListener("DOMContentLoaded", () => {
+  // …
+});
+```
+
+This is an event listener, which listens for the browser's `DOMContentLoaded` event, which signifies that the HTML body is completely loaded and parsed. The JavaScript inside this block will not run until after that event is fired, therefore the error is avoided (you'll [learn about events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) later in the course).
+
+In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
+
+```HTML
+<script src="script.js" defer></script>
+```
+In this case both the script and the HTML will load simultaneously and the code will work.
+
+An old-fashioned solution to this problem used to be to put your script element right at the bottom of the body (e.g. just before the `</body>` tag), so that it would load after all the HTML has been parsed. *The problem with this solution is that loading/parsing of the script is completely blocked until the HTML DOM has been loaded. On larger sites with lots of JavaScript, this can cause a major performance issue, slowing down your site.*
+
+### async and defer
 
 
