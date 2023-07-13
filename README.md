@@ -32,12 +32,13 @@ intended to modify*.
 
 
 ### **Learn About APIs**
-* **[What Are API's](obsidian://open?vault=LearningJS&file=What%20are%20APIs%3F)**
+* **[What Are API's](/What%20are%20APIs%3F.md)**
 
 
 ### **Browser Security**
 
 Each browser tab has its own separate bucket for running code in (these buckets are called "execution environments" in technical terms) — this means that in most cases the code in each tab is run completely separately, and the code in one tab cannot directly affect the code in another tab — or on another website. This is a good security measure — if this were not the case, then pirates could start writing code to steal information from other websites, and other such bad things.
+
 
 ## JavaScript running order 
 

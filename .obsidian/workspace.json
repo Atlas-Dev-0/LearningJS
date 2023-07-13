@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c7a918f26168eb12",
+        "id": "17f28a76dfddf6fd",
         "type": "tabs",
         "children": [
           {
-            "id": "071fd701c63025ab",
+            "id": "7550dd37c2ff821d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,9 +138,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "071fd701c63025ab",
+  "active": "7550dd37c2ff821d",
   "lastOpenFiles": [
     "What are APIs?.md",
+    "What are APIs%3F.md",
     "README.md",
     "What is JavaScript.md",
     "To-Do_WebApp/css/bootstrap.rtl.min.css.map",
