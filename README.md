@@ -1,4 +1,4 @@
-# LearningJS
+# Learning JS
 
 ### A high-level definition
 
