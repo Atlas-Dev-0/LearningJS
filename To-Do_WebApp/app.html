@@ -23,13 +23,14 @@
 
         .toDoContainer {
             width: 600px;
-            height: 650px;
+            height: fit-content;
             margin-top: 20px;
             background-color: rgb(43, 40, 46);
             border-radius: 20px;
             border-color: rgb(39, 35, 43);
             border-style: solid;
             padding-top: 20px;
+
         }
 
         #taskInput {
@@ -168,23 +169,12 @@
                 <h2>TO-DO LIST</h2>
                 <div class="inputBox_inputs">
                     <input type="text" id="taskInput" placeholder="Title.." />
-                    <input type="date" class="dateTime" />
-
                     <button onclick="addItem()" class="addBtn">Add</button>
-                </div>S
+                </div>
             </div>
         </div>
 
         <ul id="itemList">
-            <li>Hit the gym
-                <span style="margin-left: 15px;" class="dateDisplayed">date</span>
-            </li>
-            <li>Pay bills</li>
-            <li>Meet George</li>
-            <li>Buy eggs</li>
-            <li>Read a book</li>
-            <li>Organize office</li>
-            <li>Organize items</li>
         </ul>
     </div>
 
@@ -239,7 +229,6 @@
             }
             //reset the input bar
             document.getElementById("taskInput").value = "";
-
             addCloseButton()
             addHideFunction()
         }
