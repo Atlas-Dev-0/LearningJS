@@ -120,11 +120,31 @@ for (const button of buttons) {
 ```
 
 
+### Inline JavaScript handlers
 
+Sometimes, I come across bits of actual JavaScript code living inside HTML. 
 
+***For example:***
 
+**JavaScript**
+```JS
+function createParagraph() {
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
+  document.body.appendChild(para);
+}
+```
 
+**HTML**
+```HTML
+<button onclick="createParagraph()">Click me!</button>
+```
 
+The above code will create a button that will append a paragraph to the html page displaying "You clicked the button".
+
+**Please don't do this, however.** It is bad practice to pollute your HTML with JavaScript, and it is inefficient — you'd have to include the `onclick="createParagraph()"` attribute on every button you want the JavaScript to apply to.
+
+See the example -> [here]((https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#inline_javascript_handlers).
 
 
 
