@@ -65,14 +65,7 @@ If you swapped the order of the first two lines of code, it would no longer work
 * **[Server-side versus client-side code](/ServerSideAndClientSide.md)**
 * **[Dynamic versus Static Code](/DynamicVersusStaticCode.md)**
 
-### Adding JavaScript To your Page ->
-* *[Continue to Adding JavaScript to Your page](/AddingJStoPage.md) 
-
-
-
-
-
-
+# How to add JavaScript to your page?
 
 
 

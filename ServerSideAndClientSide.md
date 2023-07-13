@@ -16,9 +16,4 @@ is ***run on the server***, then its results are downloaded and displayed in the
  
 **_NOTE_**: *JavaScript can also be used as a server-side language, for example in the popular Node.js environment.*
 
-### **Continue**:
- * **[Dynamic versus Static Code](/DynamicVersusStaticCode.md)**
-
-
-
 <-[Go back to main](/README.md)

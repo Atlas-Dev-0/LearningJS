@@ -7,7 +7,4 @@ JavaScript is a lightweight interpreted programming language. The web browser re
 
 There are advantages to both types of language, but we won't discuss them right now.
 
-### **Continue**:
-* **[Server-side versus client-side code](/ServerSideAndClientSide.md)**
-
 <-[Go back to main](/README.md)
