@@ -29,6 +29,8 @@ What is even more exciting however is the functionality built on top of the clie
 
 APIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf. 
 
-#### Browser APIs - are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things. For example:
+#### Browser APIs 
+
+Browser APIs are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things. For example:
 
 * DOM or Document Object Model API - allows you to manipulate HTML and CSS, creating, removing and changing HTML
