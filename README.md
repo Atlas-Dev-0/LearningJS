@@ -21,16 +21,9 @@ The core client-side JavaScript language consists of some common programming fea
 * Running code in response to certain events occuring on a web page. For example, a button that when it clicked, it runs a function.
 
 
-###  Application Programming Interfaces (APIs)
+### **Let's Move on Deeper**
+* [What Are API's](/Learning%20JavaScript/What%20is%20JavaScript.md)
 
-What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.
 
-#### What are APIs?
 
-APIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf. 
 
-#### Browser APIs 
-
-Browser APIs are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things. For example:
-
-* DOM or Document Object Model API - allows you to manipulate HTML and CSS, creating, removing and changing HTML
