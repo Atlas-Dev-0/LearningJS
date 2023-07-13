@@ -61,7 +61,7 @@ If you swapped the order of the first two lines of code, it would no longer work
 
 
 ### **Learn About:** 
-* **[Interpreted versus compiled code](/UnderstandingInterpretedAndCompiledCode.md)**
+* **[Interpreted versus compiled code](InterpretedAndCompiledCode.md)**
 * **[Server-side versus client-side code](/ServerSideAndClientSide.md)**
 * **[Dynamic versus Static Code](/DynamicVersusStaticCode.md)**
 

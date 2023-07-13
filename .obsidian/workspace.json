@@ -148,10 +148,10 @@
   },
   "active": "a8f75fcb0c3a77b0",
   "lastOpenFiles": [
-    "DynamicVersusStaticCode.md",
-    "UnderstandingInterpretedAndCompiledCode.md",
-    "ServerSideAndClientSide.md",
+    "InterpretedAndCompiledCode.md",
     "README.md",
+    "DynamicVersusStaticCode.md",
+    "ServerSideAndClientSide.md",
     "WhatAreAPIs.md",
     "AddingJStoPage.md",
     "What are APIs?.md",
