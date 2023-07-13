@@ -71,14 +71,52 @@ JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS 
 
 ### Internal JavaScript
 
-Internal JavaScript is JavaScript that is added using `<script>` element inside the html just before the closing `</head>` element.
+**Internal JavaScript** is JavaScript code that is added using `<script>` element inside the html just before the closing `</head>` element.
+
+We'll add some JavaScript inside our [`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) element to make the page do something more interesting:
 
 ```Html
 <head>
 	<script>
-		//Script Goes here
+		document.addEventListener("DOMContentLoaded", () => {
+		  function createParagraph() {
+		    const para = document.createElement("p");
+		    para.textContent = "You clicked the button!";
+		    document.body.appendChild(para);
+		  }
+		
+		  const buttons = document.querySelectorAll("button");
+		
+		  for (const button of buttons) {
+		    button.addEventListener("click", createParagraph);
+		  }
+		});
 	</script>
 </head>
+```
+
+### External JavaScript
+
+**External JavaScript** is JavaScript code that is created in another file that is named "script.js" and is later linked to the main html page using the  ``<script src="script.js" defer></script>`` syntax.
+
+**HTML file:**
+```html
+<script src="script.js" defer></script>
+```
+
+**script.js:**
+```javascript
+function createParagraph() {
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
+  document.body.appendChild(para);
+}
+
+const buttons = document.querySelectorAll("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
+}
 ```
 
 
