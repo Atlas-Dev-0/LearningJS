@@ -32,7 +32,7 @@ intended to modify*.
 
 
 ### **Learn About APIs**
-* **[What Are API's](/What%20are%20APIs%3F.md)**
+* **[What Are API's](obsidian://open?vault=LearningJS&file=What%20are%20APIs%3F)**
 
 
 ### **Browser Security**
