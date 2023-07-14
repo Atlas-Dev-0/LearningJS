@@ -18,28 +18,49 @@
     <style>
         body {
             font-family: "Roboto", sans-serif;
-            background-color: rgb(57, 55, 61);
+            background-image: url(images/BACKGROUND.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
         }
 
         .toDoContainer {
+            padding-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
             width: 600px;
             height: fit-content;
-            margin-top: 20px;
-            background-color: rgb(43, 40, 46);
-            border-radius: 20px;
-            border-color: rgb(39, 35, 43);
-            border-style: solid;
-            padding-top: 20px;
+            margin-top: 100px;
+            border-radius: 30px;
+            box-shadow: 0 3px 10px rgba(3, 0, 10, 0.973);
+        }
 
+        .stacked {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
         }
 
         #taskInput {
+            margin-top: 15px;
             border: none;
             width: 300px;
             border-radius: 8px;
         }
 
         .addBtn {
+            margin-left: 15px;
             color: white;
             font-weight: bold;
             background-color: rgb(59, 53, 78);
@@ -53,15 +74,18 @@
 
         .addBtn:hover {
             transition: 0.7s;
-            color: rgb(59, 53, 78);
-            background-color: rgb(177, 164, 219);
+            color: rgb(113, 210, 255);
+            background: linear-gradient(rgba(142, 178, 255, 0.288), rgba(38, 160, 231, 0.205));
         }
 
         #inputBox {
             padding-bottom: 20px;
             width: 100%;
-            background-color: blueviolet;
+            background-image: url(images/BACKGROUND.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
             padding-top: 10px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
         }
 
@@ -94,6 +118,7 @@
         }
 
         #itemList li {
+            transition: 0.7s;
             margin-bottom: 10px;
             border: none;
             border-radius: 10px;
@@ -101,30 +126,33 @@
             cursor: pointer;
             position: relative;
             padding: 12px 8px 12px 40px;
-            background: rgb(167, 76, 253);
+            color: white;
             font-size: 18px;
-            transition: 0.2s;
-
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(rgba(142, 178, 255, 0.288), rgba(38, 160, 231, 0.205));
+            /* Set the gradient colors */
             /* make the list unselectable */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+
         }
 
         #itemList li:nth-child(odd) {
-            background: rgb(219, 173, 255);
+            color: white;
         }
 
         #itemList li:hover {
-            background: blueviolet;
-            color: white;
+            background: linear-gradient(rgba(142, 178, 255, 0.767), rgba(38, 160, 231, 0.603));
+            color: rgb(0, 0, 0);
 
         }
 
         /* When clicked on, add a background color and strike out text */
         #itemList li.checked {
-            background: rgb(33, 24, 31);
+            background: linear-gradient(rgba(77, 255, 77, 0.637), rgba(0, 255, 98, 0.521));
+
             color: white;
             text-decoration: line-through;
         }
@@ -164,18 +192,24 @@
 
 <body>
     <div class="toDoContainer container-fluid">
-        <div id="inputBox" class="container-fluid">
-            <div id="inputBox_TitleBar">
-                <h2>TO-DO LIST</h2>
-                <div class="inputBox_inputs">
-                    <input type="text" id="taskInput" placeholder="Title.." />
-                    <button onclick="addItem()" class="addBtn">Add</button>
+        <div class="stacked"></div>
+        <div class="content">
+            <div id="inputBox" class="container-fluid">
+                <div id="inputBox_TitleBar">
+                    <h2>TO-DO LIST</h2>
+                    <div class="inputBox_inputs">
+                        <input type="text" id="taskInput" placeholder="Title.." />
+                        <button onclick="addItem()" class="addBtn">Add</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <ul id="itemList">
-        </ul>
+            <ul id="itemList">
+                <li>Go to the Gym</li>
+                <li>Progress in JavaScript</li>
+
+            </ul>
+        </div>
     </div>
 
 

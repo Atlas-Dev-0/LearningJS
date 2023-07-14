@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "84a14f10eaef3bd6",
+            "id": "473900ee9076ed1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,11 +22,11 @@
         ]
       },
       {
-        "id": "f80bef66aa727c69",
+        "id": "d517c2c992b96692",
         "type": "tabs",
         "children": [
           {
-            "id": "b48ee14cc44fcfc2",
+            "id": "ff29b065db28c7c2",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "97e9818333dc47f5",
@@ -156,11 +157,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b48ee14cc44fcfc2",
+  "active": "ff29b065db28c7c2",
   "lastOpenFiles": [
     "README.md",
-    "docs/Personal-Notes.md",
+    "docs/JsPositioning.md",
     "To-Do_WebApp/notesForTodoApp.md",
+    "To-Do_WebApp/images/BACKGROUND.jpg",
+    "To-Do_WebApp/images/BACKGROUND.jpg.jpg",
+    "To-Do_WebApp/images/wallpaperflare.com_wallpaper.jpg",
+    "To-Do_WebApp/images/967673.jpg",
+    "To-Do_WebApp/images/japan-night-street-neon-city-ejz9pavgn2a3ep1v.jpg",
+    "To-Do_WebApp/images",
+    "docs/Personal-Notes.md",
     "JsPositioning.md",
     "deferAttribute.md",
     "InterpretedAndCompiledCode.md",
@@ -180,7 +188,6 @@
     "To-Do_WebApp/css/bootstrap.rtl.css",
     "To-Do_WebApp/css/bootstrap.min.css.map",
     "To-Do_WebApp/css/bootstrap.css.map",
-    "To-Do_WebApp/css/bootstrap.css",
     "Untitled.canvas"
   ]
 }
