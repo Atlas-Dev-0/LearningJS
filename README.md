@@ -1,4 +1,4 @@
-# What is JavaScript?
+haahha# What is JavaScript?
 ***Note Created by Kenneth Gonzales***
 
 **_NOTE_**:  The contents here are available in [MDN WEB DOCS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#javascript_running_order)
@@ -178,8 +178,7 @@ This is an event listener, which listens for the browser's `DOMContentLoaded` ev
 
 In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
 
-[What is 'defer' attribute?](/deferAttribute.md)
-
+#### [What is 'defer' attribute?](/deferAttribute.md)
 
 ```HTML
 <script src="script.js" defer></script>
@@ -188,10 +187,55 @@ In this case both the script and the HTML will load simultaneously and the code 
 
 An old-fashioned solution to this problem used to be to put your script element right at the bottom of the body (e.g. just before the `</body>` tag), so that it would load after all the HTML has been parsed. *The problem with this solution is that loading/parsing of the script is completely blocked until the HTML DOM has been loaded. On larger sites with lots of JavaScript, this can cause a major performance issue, slowing down your site.*
 
-
-
-### async and defer
+### `Async` and `Defer`
 
 There are actually two modern features we can use to bypass the problem of the blocking script — `async` and `defer` (which we saw above). Let's look at the difference between these two.
 
 Scripts loaded using the `async` attribute will download the script without blocking the page while the script is being fetched. However, once the download is complete, the script will execute, which blocks the page from rendering. You get no guarantee that scripts will run in any specific order. It is best to use `async` when the scripts in the page run independently from each other and depend on no other script on the page.
+
+#### Example: 
+
+#### Async
+When you add the `async` attribute to a `<script>` tag, it tells the browser to continue parsing the HTML document while the script is being fetched in the background. Once the script is downloaded, it will be executed asynchronoulsy, meaning it won't block the rendering of the page.
+
+```HTML 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Async Example</title>
+</head>
+<body>
+  <h1>Hello, world!</h1>
+  <script async src="script.js"></script>
+</body>
+</html>
+
+<!-- In this example, the browser will fetch the script.js file asynchronously while it continues parsing the HTML. Once the script is downloaded, it will be executed independently of the HTML parsing. -->
+```
+#### Defer
+Similar to `async`, the `defer` attribute allows the HTML parsing to continue while the script is being fetched. However, scripts with `defer` attribute will be executed in the order they appear in the HTML, just because the `DOMContentLoaded` event fires. Here's an example.
+
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Defer Example</title>
+</head>
+<body>
+  <h1>Hello, world!</h1>
+
+  <script defer src="script1.js"></script>
+  <script defer src="script2.js"></script>
+</body>
+</html>
+
+<!-- In this example, both script1.js and script2.js will be fetched asynchronously, allowing the HTML parsing to proceed. However, they will be executed in the order they appear in the HTML, just before the DOMContentLoaded event fires.
+
+It's worth noting that async and defer are optional attributes, and you can also include scripts without them. In that case, the default behavior is similar to having no attribute at all, and the script will be fetched and executed synchronously, blocking the HTML parsing until it completes.
+ -->
+```
+
+### **Learn About**:
+* [**Choosing the Right Placement for JavaScript](/JsPositioning.md)
+
+
