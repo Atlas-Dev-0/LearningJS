@@ -291,7 +291,3 @@ var contents = 'Four score and seven years ago…';
 ```
 
 The double-curlies `{{display: 'block'}}` is actually putting a JavaScript object right into the JSX!
-
-## Other Topics (probably other cheat-sheets or other JavaScript references available online)
-
-Regular expressions, prototypical inheritance, expressions, `null` and `undefined` and `NaN`, variable scope, built-in functions, browser/DOM functions, `this`,
