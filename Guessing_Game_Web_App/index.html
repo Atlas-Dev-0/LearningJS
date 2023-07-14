@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Website Testing</title>
+
+
+    <style>
+        .correct {
+            background-color: lightgreen;
+            width: max-content;
+
+        }
+
+        .veryClose {
+            background-color: green;
+            width: max-content;
+        }
+
+        .veryFar {
+            background-color: crimson;
+            width: max-content;
+        }
+
+        .far {
+            background-color: orange;
+            width: max-content;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Number Guessing Game</h1>
+    <p1>
+        We have selected a random number between 1 and 100.
+        See if you can guess it in 10 turns or fewer.
+        We'll tell you if your guess was too high or too low.
+    </p1>
+    <p class="correct">Correct</p>
+    <p class="veryClose">Very Close</p>
+    <p class="far">Far</p>
+    <p class="veryFar">Very Far</p>
+
+    <p>Enter a number: </p>
+    <input type="number" id="inputNumber" placeholder="Number Here.." />
+    <button id="submitButton">Submit</button>
+    <p id="position" class="">Position</p>
+    <script defer src="/scripts/script.js"></script>
+</body>
+
+</html>
