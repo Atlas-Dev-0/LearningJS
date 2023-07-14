@@ -1,4 +1,4 @@
-haahha# What is JavaScript?
+# What is JavaScript?
 ***Note Created by Kenneth Gonzales***
 
 **_NOTE_**:  The contents here are available in [MDN WEB DOCS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#javascript_running_order)
