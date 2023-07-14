@@ -1,5 +1,5 @@
 ## HTML defer Attribute
-\
+
 ### Definition and Usage
 
 The `defer` attribute is a boolean attribute.

@@ -34,7 +34,7 @@ intended to modify*.
 
 
 ### **Learn About APIs**
-* **[What Are API's](/WhatAreAPIs.md)**
+* **[What Are API's](/docs/WhatAreAPIs.md)**
 
 
 ### **Browser Security**
@@ -63,9 +63,9 @@ If you swapped the order of the first two lines of code, it would no longer work
 
 
 ### **Learn About:** 
-* **[Interpreted versus compiled code](InterpretedAndCompiledCode.md)**
-* **[Server-side versus client-side code](/ServerSideAndClientSide.md)**
-* **[Dynamic versus Static Code](/DynamicVersusStaticCode.md)**
+* **[Interpreted versus compiled code](/docs/InterpretedAndCompiledCode.md)**
+* **[Server-side versus client-side code](/docs/ServerSideAndClientSide.md)**
+* **[Dynamic versus Static Code](/docs/DynamicVersusStaticCode.md)**
 
 # How to add JavaScript to your page?
 
@@ -178,7 +178,7 @@ This is an event listener, which listens for the browser's `DOMContentLoaded` ev
 
 In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
 
-#### [What is 'defer' attribute?](/deferAttribute.md)
+#### [What is 'defer' attribute?](/docs/deferAttribute.md)
 
 ```HTML
 <script src="script.js" defer></script>
@@ -236,6 +236,9 @@ It's worth noting that async and defer are optional attributes, and you can also
 ```
 
 ### **Learn About**:
-* **[Choosing the Right Placement for JavaScript](/JsPositioning.md)**
-* **[JavaScript Cheat Sheet Doc](/JSCheatSheet.md)**
+* **[Choosing the Right Placement for JavaScript](/docs/JsPositioning.md)**
+* **[JavaScript Cheat Sheet Doc](/docs/JSCheatSheet.md)**
 
+
+### **Simple Projects**:
+* **[My Personal Notes and Projects](/docs/Personal-Notes.md)**
