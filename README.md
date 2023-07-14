@@ -236,6 +236,6 @@ It's worth noting that async and defer are optional attributes, and you can also
 ```
 
 ### **Learn About**:
-* **[Choosing the Right Placement for JavaScript](/JsPositioning.md)
-* **[JavaScript Cheat Sheet Doc](/JSCheatSheet.md)
+* **[Choosing the Right Placement for JavaScript](/JsPositioning.md)**
+* **[JavaScript Cheat Sheet Doc](/JSCheatSheet.md)**
 
