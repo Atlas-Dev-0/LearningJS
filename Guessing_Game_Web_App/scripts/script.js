@@ -1,9 +1,7 @@
 function addPosition(x, number) {
-
-
     console.log("Submit Clicked")
-    console.log(number);
-    console.log(x);
+    console.log("user picked: " + number);
+    console.log("Number X: " + x);
     var pos = document.getElementById("position");
     while (pos.classList.length > 0) {
         pos.classList.remove(pos.classList.item(0));
@@ -15,7 +13,7 @@ function addPosition(x, number) {
     } else if (number > x - 10 && number !== x && number < x + 10 && number !== x) {
         pos.classList.add("veryClose");
         console.log("Very Close")
-    } else if (number < x - 20 && number > x + 20) {
+    } else if (number > x - 20 && number < x + 20) {
         pos.classList.add("far");
         console.log("Far")
     } else {
@@ -24,7 +22,6 @@ function addPosition(x, number) {
 
     }
 }
-
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,0 +1,23 @@
+  
+
+.correct {
+    background-color: lightgreen;
+    width: max-content;
+
+  }
+
+.veryClose {
+    background-color: green;
+    width: max-content;
+}
+
+.veryFar {
+  background-color: crimson;
+  width: max-content;
+}
+
+.far {
+  background-color: orange;
+  width: max-content;
+}
+  
